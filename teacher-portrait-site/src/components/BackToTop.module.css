@@ -1,0 +1,33 @@
+.button {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  width: 48px;
+  height: 48px;
+  background: var(--accent-red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  z-index: 50;
+}
+
+.button:hover {
+  background: var(--red-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.4);
+}
+
+.button svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,337 @@
+.infographic {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: var(--bg-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--bg-cream);
+  border-radius: var(--radius-xl);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+  .filterGroup {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.filterLabel {
+  font-weight: 600;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  min-width: 120px;
+}
+
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.filterBtn {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-gray);
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+  color: var(--accent-red);
+}
+
+.filterBtn.active {
+  background: var(--accent-red);
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.card {
+  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-white) 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  text-align: center;
+  border: 1px solid var(--bg-light);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardValue {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cardLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.cardHint {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .charts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .charts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.chartCard {
+  background: var(--bg-cream);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+}
+
+.chartTitle {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Bar Chart */
+.barChart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+  padding-bottom: var(--spacing-lg);
+}
+
+.barContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 80px;
+}
+
+.barValue {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.barWrapper {
+  width: 40px;
+  height: 150px;
+  background: var(--bg-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: var(--radius-md);
+  transition: height var(--transition-slow);
+}
+
+.barSegments {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+}
+
+.segmentGold, .segmentSilver, .segmentBronze {
+  width: 100%;
+}
+
+.segmentGold { background: linear-gradient(135deg, #FFD700, #FFA500); }
+.segmentSilver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); }
+.segmentBronze { background: linear-gradient(135deg, #CD7F32, #8B4513); }
+
+.barLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  margin-top: var(--spacing-sm);
+}
+
+.chartLegend {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.8rem;
+  color: var(--text-gray);
+}
+
+.legendGold, .legendSilver, .legendBronze {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legendGold { background: linear-gradient(135deg, #FFD700, #FFA500); }
+.legendSilver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); }
+.legendBronze { background: linear-gradient(135deg, #CD7F32, #8B4513); }
+
+/* Donut Chart */
+.donutChart {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.donut {
+  width: 100%;
+  height: 100%;
+}
+
+.donutCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.donutValue {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.donutLabel {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.donutLegend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.donutLegendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+
+.donutColorGreen, .donutColorRed {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-sm);
+}
+
+.donutColorGreen { background: var(--accent-green); }
+.donutColorRed { background: var(--accent-red); }
+
+/* Directions List */
+.directionsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.directionItem {
+  display: grid;
+  grid-template-columns: 1fr 100px 30px;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.directionName {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+.directionBar {
+  height: 8px;
+  background: var(--bg-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.directionFill {
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-green), var(--accent-red));
+  border-radius: 4px;
+  transition: width var(--transition-slow);
+}
+
+.directionCount {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: right;
+}

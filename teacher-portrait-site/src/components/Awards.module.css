@@ -1,0 +1,110 @@
+.awards {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: var(--bg-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.card {
+  position: relative;
+  background: var(--bg-cream);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  padding-top: var(--spacing-2xl);
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-red);
+}
+
+.cardDecoration {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+  color: var(--accent-red);
+}
+
+.cardDecoration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
+.cardOrganization {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-xs);
+}
+
+.cardNumber {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-family: monospace;
+}
+
+.scanNotice {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--bg-light);
+}
+
+.scanNotice svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-light);
+}
+
+.scanNotice span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-style: italic;
+}
